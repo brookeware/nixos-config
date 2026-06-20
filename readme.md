@@ -18,9 +18,9 @@ This configuration uses flakes and Home-Manager, and is designed for both aesthe
 | Boot                | [Systemd-Boot](https://github.com/systemd/systemd)                            |
 
 ## Screenshots
-![Floating Windows](assets/screenshots/preview1)
-![Tiled Windows](assets/screenshots/preview2)
-![Wofi](assets/screenshots/preview3)
+![Floating Windows](assets/screenshots/preview1.png)
+![Tiled Windows](assets/screenshots/preview2.png)
+![Wofi](assets/screenshots/preview3.png)
 
 ## To Do List
 - Rewrite for multiple hosts
