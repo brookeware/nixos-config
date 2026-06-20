@@ -84,6 +84,5 @@
 
   environment.etc."/xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
-  # Don't change this value
   system.stateVersion = "25.05";
 }

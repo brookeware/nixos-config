@@ -40,22 +40,22 @@
       nixosConfigurations.nixos = lib.nixosSystem {
         modules = [
           ./configuration.nix
-	  ./hardware-configuration.nix
-	  ./modules/system
+          ./hardware-configuration.nix
+          ./modules/system
 
           mangowm.nixosModules.mango
-	  qtengine.nixosModules.default
+          qtengine.nixosModules.default
 
-	  home-manager.nixosModules.home-manager {
-	    home-manager = {
-	      useGlobalPkgs = true;
-	      useUserPackages = true;
-	      users.brookolli = import ./modules/home-manager;
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.brookolli = import ./modules/home-manager;
 
 	      sharedModules = [
                 nixvim.homeModules.nixvim
-		mangowm.hmModules.mango
-		zen-browser.homeModules.twilight
+                mangowm.hmModules.mango
+                zen-browser.homeModules.twilight
 	      ];
 	    };
 	  }

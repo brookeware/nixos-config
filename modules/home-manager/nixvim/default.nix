@@ -6,7 +6,7 @@
       
       colorschemes.base16 = {
         enable = true;
-	colorscheme = {
+        colorscheme = {
           base00 = "#142535";
           base01 = "#0e1924";
           base02 = "#283645";
@@ -30,24 +30,24 @@
         lualine.enable = true;
         nvim-tree = {
           enable = true;
-	  openOnSetupFile = true;
+          openOnSetupFile = true;
 	};
         web-devicons.enable = true;
-	bufferline.enable = true;
-	nvim-web-devicons.enable = true;
-	gitsigns-nvim.enable = true;
-	vim-suda.enable = true;
+        bufferline.enable = true;
+        nvim-web-devicons.enable = true;
+        gitsigns-nvim.enable = true;
+        vim-suda.enable = true;
       };
 
       opts = {
         # Line numbers
-	number = true;
-	relativenumber = false;
+        number = true;
+        relativenumber = false;
 
-	# Search behavior
-	ignorecase = true;
-	smartcase = true;
-	hlsearch = false;
+        # Search behavior
+        ignorecase = true;
+        smartcase = true;
+        hlsearch = false;
       };
 
       autoCmd = [
