@@ -30,7 +30,7 @@
   users.users.brookolli = {
     isNormalUser = true;
     description = "brookolli";
-    extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
+    extraGroups = [ "networkmanager" "wheel" ];
   };
 
   # Environment variables
@@ -58,10 +58,6 @@
     kdePackages.breeze-icons 
     vim 
   ];
-
-  # Virtualbox
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
 
   services = {
     xserver.enable = true;
