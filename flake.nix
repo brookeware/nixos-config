@@ -56,9 +56,9 @@
                 nixvim.homeModules.nixvim
                 mangowm.hmModules.mango
                 zen-browser.homeModules.twilight
-	      ];
-	    };
-	  }
+              ];
+            };
+          }
         ];
       };
     };
