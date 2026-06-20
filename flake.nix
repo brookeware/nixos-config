@@ -52,7 +52,7 @@
               useUserPackages = true;
               users.brookolli = import ./modules/home-manager;
 
-	      sharedModules = [
+              sharedModules = [
                 nixvim.homeModules.nixvim
                 mangowm.hmModules.mango
                 zen-browser.homeModules.twilight
