@@ -77,11 +77,6 @@
     enable32Bit = true;
   };
 
-  # Fix for running bash scripts with the #/bin/bash header
-  systemd.tmpfiles.rules = [
-    "L+ /bin/bash - - - - ${pkgs.bash}/bin/bash"
-  ];
-
   environment.etc."/xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   system.stateVersion = "25.05";
