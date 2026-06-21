@@ -75,10 +75,6 @@
     })
   ];
 
-  wayland.windowManager.mango = {
-    enable = true;
-  };
-
   programs.zen-browser.enable = true;
 
   home.stateVersion = "26.05";
