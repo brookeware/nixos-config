@@ -24,6 +24,6 @@ This configuration uses flakes and Home-Manager, and is designed for both aesthe
 
 ## To Do List
 - Rewrite for multiple hosts
-- Add non-Nix user assets/dotfiles and their /home symlinks
 - Declaratively install Zen browser with a set of extensions and settings
-- Definitely much more that I'm not remembering at the moment
+- Write more extensive Nixvim configuration
+- Convert dotfiles to Nix where possible
