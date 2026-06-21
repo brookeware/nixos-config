@@ -4,28 +4,14 @@
   home.username = "brookolli";
   home.homeDirectory = "/home/brookolli";
 
-  # Import files from the current configuration directory into the Nix store,
-  # and create symbolic links pointing to those store files in the Home directory.
+  home.file.".config" = {
+    source = ./dotfiles/.config;
+    recursive = true;
+  };
 
-  # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
-
-  # Import the scripts directory into the Nix store,
-  # and recursively generate symbolic links in the Home directory pointing to the files in the store.
-  # home.file.".config/i3/scripts" = {
-  #   source = ./scripts;
-  #   recursive = true;   # link recursively
-  #   executable = true;  # make all files executable
-  # };
-
-  # encode the file content in nix configuration file directly
-  # home.file.".xxx".text = ''
-  #     xxx
-  # '';
-
-  # set cursor size and dpi for 4k monitor
-  xresources.properties = {
-    "Xcursor.size" = 16;
-    "Xft.dpi" = 172;
+  home.file.".local/share" = {
+    source = ./dotfiles/.local/share;
+    recursive = true;
   };
 
   home.packages = with pkgs; [

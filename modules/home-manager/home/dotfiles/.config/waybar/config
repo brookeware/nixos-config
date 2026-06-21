@@ -1,0 +1,106 @@
+{
+	"layer": "top",
+	"position": "bottom",
+	"height": 35,
+	"margin-bottom": -3,
+	"margin-top": 0,
+	"margin-left": 8,
+	"margin-right": 8,
+
+	"modules-left": ["ext/workspaces","dwl/window"],
+	"modules-center": ["mpris","cava"],
+	"modules-right":  ["tray","pulseaudio","backlight","battery","clock"],
+
+	"battery": {
+		"states": {
+		"warning": 30,
+		"critical": 15
+		},
+	"format": "{icon}&#8239;{capacity}%",
+	"format-charging": "󰂄&#8239;{capacity}%",
+	"format-plugged": "󰂄&#8239;{capacity}%",
+	"format-alt": "{icon} {time}",
+	"format-icons": ["󰁺", "󰁻", "󰁽", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"]
+	},
+	"ext/workspaces": {
+		"sort-by-id": true,
+		"on-click": "activate"
+	},
+	"dwl/window": {
+		"max-length": 200
+	},
+	"tray": {
+		"icon-size": 16,
+		"spacing": 6
+	},
+	"clock": {
+		"locale": "C", 
+		"format": " {:%I:%M %p}",
+		"format-alt": " {:%a, %b %d}" // Icon: calendar-alt
+	},
+	"cpu": {
+		"format": "&#8239;{usage}%",
+		"tooltip": false,
+		"on-click": "konsole -e 'btop'"
+	},
+	"memory": {
+		"interval": 30,
+		"format": " {used:0.2f}GB",
+		"max-length": 10,
+		"tooltip": false,
+		"warning": 70,
+		"critical": 90
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+		"activated": "",
+		"deactivated": ""
+		}
+	},
+	"backlight": {
+		// "device": "apple-panel-bl",
+		"format": "{icon}&#8239;{percent}%",
+		"format-icons": ["", ""],
+		"on-scroll-down": "brightnessctl -c backlight set 5%-",
+		"on-scroll-up": "brightnessctl -c backlight set +5%"
+	},
+	"pulseaudio": {
+		// "scroll-step": 1, // %, can be a float
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "{icon} {volume}% {format_source}",
+		"format-bluetooth-muted": " {format_source}",
+		"format-muted": "  {format_source}",
+		"format-source": " {volume}%",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "🎧",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		},
+  		"on-click": "pavucontrol-qt"
+	},
+	"mpris": {
+		"format": "{player_icon} {artist} - {title}",
+		"format-paused": "{status_icon} <i>{dynamic}</i>",
+		"player-icons": {
+		"default": "▶",
+		"mpv": "🎵"
+		},
+		"status-icons": {
+			"paused": "⏸"
+		}
+	},
+	"cava": {
+		"cava_config": "$HOME/.config/cava/config_waybar",
+		"input_delay": 0,
+		"format-icons" : [ "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+		"actions": {
+			"on-click-right": "mode"
+		}
+	}
+}

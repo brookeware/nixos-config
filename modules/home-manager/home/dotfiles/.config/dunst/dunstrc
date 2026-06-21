@@ -1,0 +1,16 @@
+[global]
+  font = "Hack Nerd Font 10"
+
+  frame_width = 2
+  corner_radius = 8
+
+  max_icon_size = 64
+
+  frame_color = "#D47889"
+  background = "#142535CC"
+ 
+
+  height = (60,300)
+  width = (0,500)
+  offset = (10,10)
+  origin = bottom-right
