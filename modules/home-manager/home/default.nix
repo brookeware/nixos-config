@@ -64,7 +64,7 @@
     obs-studio
     cava
     tty-clock
-    cmus
+    cmus 
 
     # Temporary workaround until the Lutris build issue is fixed
     (pkgs.lutris.override {

@@ -3,6 +3,7 @@
   imports = [
     ./audio
     ./boot
+    ./bluetooth
     ./networking
     ./nvidia
     ./openrgb
