@@ -14,6 +14,11 @@
     recursive = true;
   };
 
+  home.file."Wallpapers" = {
+    source = ../../../assets/wallpapers;
+    recursive = true;
+  }
+
   home.packages = with pkgs; [
     jq
     btop
