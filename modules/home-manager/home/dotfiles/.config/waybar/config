@@ -86,7 +86,7 @@
 	},
 	"mpris": {
 		"format": "{player_icon} {artist} - {title}",
-		"format-paused": "{status_icon} <i>{dynamic}</i>",
+		"format-paused": "{player_icon} {artist} - {title}",
 		"player-icons": {
 		"default": "▶",
 		"mpv": "🎵"
