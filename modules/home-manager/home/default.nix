@@ -51,11 +51,17 @@
     kdePackages.kio
     kdePackages.kio-fuse
     kdePackages.kio-extras
-    kdePackages.kio-admin 
+    kdePackages.kio-admin
+    kdePackages.kmail
+    kdePackages.kmail-account-wizard
+    kdePackages.kdepim-runtime
+    kdePackages.akonadi
     obs-studio
     cava
     tty-clock
-    cmus 
+    cmus
+    cmake
+    protonvpn-gui
 
     # Temporary workaround until the Lutris build issue is fixed
     (pkgs.lutris.override {
