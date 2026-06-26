@@ -62,6 +62,7 @@
     cmus
     cmake
     protonvpn-gui
+    heroic
 
     # Temporary workaround until the Lutris build issue is fixed
     (pkgs.lutris.override {
