@@ -5,7 +5,7 @@
 This is my personal multiple-host NixOS config that I currently use daily for both my main PC and M1 Macbook Pro. It has been my main way of teaching myself functional programming and the Nix programming language. This configuration uses flakes and Home-Manager, and is designed for a balance of both aesthetics and functionality.
 
 ## Hosts
-| Host                               | Kernel        |
+| Host                               | Platform      |
 | ---------------------------------- | ------------- |
 | nixos-pc                           | x86_64-linux  |
 | nixos-macbook                      | aarch64-linux |
