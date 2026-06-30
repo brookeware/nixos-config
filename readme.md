@@ -1,6 +1,17 @@
+> [!WARNING]
+> Do NOT use this configuration without modifying it to use on your own machine or your system may become unbootable
+
 # nixos-config
-This is my personal NixOS config that I use on my main PC. I use this configuration as my daily driver on my main PC running NixOS and it has been my main way of teaching myself functional programming and the Nix programming language.
-This configuration uses flakes and Home-Manager, and is designed for both aesthetics and functionality.
+This is my personal multiple-host NixOS config that I currently use daily for both my main PC and M1 Macbook Pro. It has been my main way of teaching myself functional programming and the Nix programming language. This configuration uses flakes and Home-Manager, and is designed for a balance of both aesthetics and functionality.
+
+## Hosts
+| Host                               | Kernel        |
+| ---------------------------------- | ------------- |
+| nixos-pc                           | x86_64-linux  |
+| nixos-macbook                      | aarch64-linux |
+| nixos-server (not implemented yet) | x86_64-linux  |
+
+Credit to [nixos-apple-silicon](https://github.com/nix-community/nixos-apple-silicon/) for providing resources for using NixOS on ARM-based Macs
 
 ## Components
 | Component           | Name                                                                          |
@@ -23,7 +34,9 @@ This configuration uses flakes and Home-Manager, and is designed for both aesthe
 ![Wofi](assets/screenshots/preview3.png)
 
 ## To Do List
-- Rewrite for multiple hosts
+- ~~Restructure for multiple hosts~~
+- Add configuration for host "nixos-server"
 - Declaratively install Zen browser with a set of extensions and settings
-- Write more extensive Nixvim configuration
-- Convert dotfiles to Nix where possible
+- Write a more extensive Nixvim configuration
+- Convert dotfiles to native Nix where possible
+- Cleanup and reorganizing
