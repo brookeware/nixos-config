@@ -26,7 +26,6 @@
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs = {
-        # IMPORTANT: To ensure compatibility with the latest Firefox version, use nixpkgs-unstable.
         nixpkgs.follows = "nixpkgs";
       };
     };
@@ -39,7 +38,7 @@
       modules = [
         ./hosts/nixos-pc/configuration.nix
         ./modules/nixos-pc/system
-	./modules/common/system
+        ./modules/common/system
 
         mangowm.nixosModules.mango
         qtengine.nixosModules.default
@@ -65,8 +64,8 @@
 
       modules = [
         ./hosts/nixos-macbook/configuration.nix
-	./modules/nixos-macbook/system
-	./modules/common/system
+        ./modules/nixos-macbook/system
+        ./modules/common/system
 
         mangowm.nixosModules.mango
         qtengine.nixosModules.default
@@ -79,11 +78,11 @@
 
             sharedModules = [
               nixvim.homeModules.nixvim
-	      mangowm.hmModules.mango
-	      zen-browser.homeModules.twilight
+              mangowm.hmModules.mango
+              zen-browser.homeModules.twilight
             ];
           };
-	}
+        }
       ];
     };
   };

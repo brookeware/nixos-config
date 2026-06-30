@@ -1,11 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./apple-silicon-support
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./apple-silicon-support
+  ];
 
   # Time zone
   time.timeZone = "US/Central";

@@ -37,6 +37,7 @@
         nvim-web-devicons.enable = true;
         gitsigns-nvim.enable = true;
         vim-suda.enable = true;
+	guess-indent.enable = true;
       };
 
       opts = {
@@ -51,7 +52,7 @@
       };
 
       autoCmd = [
-        # To do
+        
       ];
   };
 }
