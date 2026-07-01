@@ -15,7 +15,7 @@
   };
 
   home.file."Wallpapers" = {
-    source = ../../../assets/wallpapers;
+    source = ../../../../assets/wallpapers;
     recursive = true;
   };
 
