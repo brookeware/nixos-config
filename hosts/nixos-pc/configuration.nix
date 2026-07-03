@@ -23,7 +23,7 @@
   };
 
   # Enable MangoWM
-   programs.mango.enable = true;
+  programs.mango.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -59,7 +59,8 @@
     kdePackages.konsole
     kdePackages.breeze
     kdePackages.breeze.qt5
-    kdePackages.breeze-icons 
+    kdePackages.breeze-icons
+    kitty
     vim 
   ];
 
