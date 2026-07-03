@@ -9,7 +9,7 @@
     };
 
     shellAliases = {
-      "nrs" = "sudo nixos-rebuild switch";
+      "nrs" = "sudo nixos-rebuild switch --flake ~/nixos-config --impure";
     };
   };
 
