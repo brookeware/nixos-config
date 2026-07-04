@@ -46,7 +46,6 @@
     mpv
     vlc
     kdePackages.ark
-    kdePackages.systemsettings
     kdePackages.gwenview
     kdePackages.kio
     kdePackages.kio-fuse
