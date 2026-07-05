@@ -1,33 +1,15 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./modules
+  ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "nixos-server"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
+  # Time zone
   time.timeZone = "America/Chicago";
 
-  # Select internationalisation properties.
+  # Locale
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -42,42 +24,40 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+  # Users
+  users.users = {
+    "brooke" = {
+      isNormalUser = true;
+      description = "brooke";
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
+      packages = with pkgs; [
+        git
+      ];
+    };
+
+    "wawacreate" = {
+      isNormalUser = true;
+      description = "wawacreate";
+      extraGroups = [ 
+        "networkmanager"
+        "wheel"
+      ];
+      packages = with pkgs; [
+        openjdk21
+      ];
+    };
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."brooke" = {
-    isNormalUser = true;
-    description = "brooke";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-    packages = with pkgs; [
-
-    ];
-  };
-
-  users.users."wawacreate" = {
-    isNormalUser = true;
-    description = "wawacreate";
-    extraGroups = [ 
-      "networkmanager"
-      "wheel"
-    ];
-    packages = with pkgs; [
-      openjdk21
-    ];
-  };
-
+  # Swap file
   swapDevices = [{
     device = "/var/lib/swapfile";
     size = 16*1024; # 16 GiB
   }];
 
+  # Enable nginx
   services.nginx = {
     enable = true;
   };
@@ -85,61 +65,21 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # Install system packages
   environment.systemPackages = with pkgs; [
     vim
     neovim
-    kakoune
     wget
     fastfetch
     tmux
     btop
   ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-    openFirewall = true;
-    settings = {
-      PasswordAuthentication = true;
-      KbdInteractiveAuthentication = false;
-      PermitRootLogin = "no";
-      AllowUsers = [
-        "brooke"
-	"wawacreate"
-      ];
-    };
-  };
-
+ 
+  # Enable Jellyfin server
   services.jellyfin = {
     enable = true;
     openFirewall = true;
   };
 
-
-  # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 25565 ];
-  networking.firewall.allowedUDPPorts = [ 25565 ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "26.05"; # Did you read the comment?
-
+  system.stateVersion = "26.05";
 }
