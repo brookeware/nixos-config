@@ -32,7 +32,7 @@
   };
 
   outputs = inputs@ { self, nixpkgs, mangowm, home-manager, nixvim, qtengine, zen-browser, ... }: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos-pc = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
       modules = [
