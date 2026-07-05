@@ -85,7 +85,7 @@
     enable32Bit = true;
   };
 
-  # Allow KDE apps to see other programs to open files in
+  # Fix for KDE app file associations in non-plasma environment
   environment.etc."/xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   system.stateVersion = "25.05";
