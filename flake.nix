@@ -32,58 +32,68 @@
   };
 
   outputs = inputs@ { self, nixpkgs, mangowm, home-manager, nixvim, qtengine, zen-browser, ... }: {
-    nixosConfigurations.nixos-pc = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+    nixosConfigurations = {
+      nixos-pc = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
 
-      modules = [
-        ./hosts/nixos-pc/configuration.nix
-        ./modules/nixos-pc/system
-        ./modules/common/system
+        modules = [
+          ./hosts/nixos-pc/configuration.nix
+          ./modules/nixos-pc/system
+          ./modules/common/system
 
-        mangowm.nixosModules.mango
-        qtengine.nixosModules.default
+          mangowm.nixosModules.mango
+          qtengine.nixosModules.default
 
-        home-manager.nixosModules.home-manager {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.brookolli = import ./modules/nixos-pc/home-manager;
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.brookolli = import ./modules/nixos-pc/home-manager;
 
-            sharedModules = [
-              nixvim.homeModules.nixvim
-              mangowm.hmModules.mango
-              zen-browser.homeModules.twilight
-            ];
-          };
-        }
-      ];
-    };
+              sharedModules = [
+                nixvim.homeModules.nixvim
+                mangowm.hmModules.mango
+                zen-browser.homeModules.twilight
+              ];
+            };
+          }
+        ];
+      };
 
-    nixosConfigurations.nixos-macbook = nixpkgs.lib.nixosSystem {
-      system = "aarch64-linux";
+      nixos-macbook = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
 
-      modules = [
-        ./hosts/nixos-macbook/configuration.nix
-        ./modules/nixos-macbook/system
-        ./modules/common/system
+        modules = [
+          ./hosts/nixos-macbook/configuration.nix
+          ./modules/nixos-macbook/system
+          ./modules/common/system
 
-        mangowm.nixosModules.mango
-        qtengine.nixosModules.default
+          mangowm.nixosModules.mango
+          qtengine.nixosModules.default
 
-        home-manager.nixosModules.home-manager {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.brooke = import ./modules/nixos-macbook/home-manager;
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.brooke = import ./modules/nixos-macbook/home-manager;
 
-            sharedModules = [
-              nixvim.homeModules.nixvim
-              mangowm.hmModules.mango
-              zen-browser.homeModules.twilight
-            ];
-          };
-        }
-      ];
+              sharedModules = [
+                nixvim.homeModules.nixvim
+                mangowm.hmModules.mango
+                zen-browser.homeModules.twilight
+              ];
+            };
+          }
+        ];
+      };
+
+      nixos-server = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        modules = [
+          ./hosts/nixos-server/configuration.nix
+        ];
+      };
     };
   };
 }
