@@ -3,7 +3,7 @@
   programs.zsh = {
     enable = true;
 
-    oh-my-zsh = {
+    ohMyZsh = {
       enable = true;
       theme = "gnzh";
     };

@@ -60,7 +60,7 @@
     tty-clock
     cmus
     cmake
-    protonvpn-gui
+    proton-vpn
     heroic
 
     # Temporary workaround until the Lutris build issue is fixed
@@ -82,6 +82,7 @@
   ];
 
   home.pointerCursor = {
+    enable = true;
     name = "Adwaita";
     package = pkgs.adwaita-icon-theme;
     size = 24;
@@ -93,6 +94,6 @@
 
   programs.zen-browser.enable = true;
 
-  home.stateVersion = "26.05";
+  home.stateVersion = "26.11";
 }
 
