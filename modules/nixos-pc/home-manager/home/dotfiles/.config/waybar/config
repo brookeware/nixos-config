@@ -7,8 +7,8 @@
 	"margin-left": 8,
 	"margin-right": 8,
 
-	"modules-left": ["ext/workspaces","dwl/window"],
-	"modules-center": ["mpris","cava"],
+	"modules-left": ["mango/workspaces","mango/window"],
+	"modules-center": ["mpris"],
 	"modules-right":  ["tray","pulseaudio","backlight","battery","clock"],
 
 	"battery": {
