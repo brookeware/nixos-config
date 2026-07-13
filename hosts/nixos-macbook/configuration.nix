@@ -24,6 +24,9 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # Enable Asahi hardware module
+  hardware.asahi.enable = true;
+
   # Enable Macbook Touch Bar
   hardware.apple.touchBar = {
     enable = true;
