@@ -55,12 +55,13 @@
     cmake
     lxqt.pavucontrol-qt
     vesktop
-    protonvpn-gui
+    proton-vpn
   ];
 
   programs.zen-browser.enable = true;
 
   home.pointerCursor = {
+    enable = true;
     name = "Adwaita";
     package = pkgs.adwaita-icon-theme;
     size = 24;
