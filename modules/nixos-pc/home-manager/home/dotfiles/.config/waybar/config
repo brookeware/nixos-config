@@ -38,19 +38,6 @@
 		"format": " {:%I:%M %p}",
 		"format-alt": " {:%a, %b %d}" // Icon: calendar-alt
 	},
-	"cpu": {
-		"format": "&#8239;{usage}%",
-		"tooltip": false,
-		"on-click": "konsole -e 'btop'"
-	},
-	"memory": {
-		"interval": 30,
-		"format": " {used:0.2f}GB",
-		"max-length": 10,
-		"tooltip": false,
-		"warning": 70,
-		"critical": 90
-	},
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"format-icons": {
@@ -102,5 +89,19 @@
 		"actions": {
 			"on-click-right": "mode"
 		}
+	},
+	"mango/workspaces": {
+		"format": "{icon}",
+		"hide-empty": true,
+		"on-click": "activate",
+		"on-click-right": "toggle",
+		"overview-label": "OVERVIEW"
+	},
+	"mango/layout": {
+		"format": "{}"
+	},
+	"mango/window": {
+		"format": "{}",
+		"icon-size": 20
 	}
 }
