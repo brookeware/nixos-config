@@ -7,6 +7,7 @@
     ./openrgb
     ./steam
     ./sunshine
+    ./xdg-portal
     #./zen
   ];
 }
