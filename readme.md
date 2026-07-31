@@ -1,8 +1,8 @@
 > [!WARNING]
-> Do NOT use this configuration without modifying it to use on your own machine or your system may become unbootable
+> Do NOT use any configurations in this flake without modifying it to use on your own machine or your system may become unbootable
 
 # nixos-config
-This is my personal multiple-host NixOS config that I currently use daily for both my main PC and M1 Macbook Pro. It has been my main way of teaching myself functional programming and the Nix programming language. This configuration uses flakes and Home-Manager, and is designed for a balance of both aesthetics and functionality.
+This is my personal multiple-host NixOS flake config that I currently use for three different machines. It has a heavy focus on aesthitics while still keeping everything functional.
 
 ## Hosts
 | Host                               | Platform      |
@@ -35,7 +35,8 @@ Credit to [nixos-apple-silicon](https://github.com/nix-community/nixos-apple-sil
 
 ## To Do List
 - ~~Restructure for multiple hosts~~
-- Add configuration for host "nixos-server"
+- ~~Add configuration for host "nixos-server"~~
+- Set up game servers and file hosting for "nixos-server"
 - Declaratively install Zen browser with a set of extensions and settings
 - Write a more extensive Nixvim configuration
 - Convert dotfiles to native Nix where possible
