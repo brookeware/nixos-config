@@ -9,7 +9,7 @@ This is my personal multiple-host NixOS flake config that I currently use for th
 | ---------------------------------- | ------------- |
 | nixos-pc                           | x86_64-linux  |
 | nixos-macbook                      | aarch64-linux |
-| nixos-server (not implemented yet) | x86_64-linux  |
+| nixos-server                       | x86_64-linux  |
 
 Credit to [nixos-apple-silicon](https://github.com/nix-community/nixos-apple-silicon/) for providing resources for using NixOS on ARM-based Macs
 
