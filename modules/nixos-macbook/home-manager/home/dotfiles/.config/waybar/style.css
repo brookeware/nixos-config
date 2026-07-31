@@ -9,8 +9,8 @@ window#waybar {
     background: rgba(20, 37, 53, 0.7);
     border: 2px solid rgba(212, 120, 137, 1);
     border-bottom: 0px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 #workspaces{
