@@ -5,5 +5,6 @@
     ./qtengine
     ./audio
     ./bluetooth
+    ./xdg-desktop-portal
   ];
 }
