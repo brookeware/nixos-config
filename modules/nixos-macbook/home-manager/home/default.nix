@@ -56,6 +56,7 @@
     lxqt.pavucontrol-qt
     vesktop
     proton-vpn
+    blockbench
   ];
 
   programs.zen-browser.enable = true;
