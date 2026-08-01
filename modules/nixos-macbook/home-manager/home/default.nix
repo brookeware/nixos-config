@@ -20,43 +20,43 @@
   };
 
   home.packages = with pkgs; [
-    jq
-    btop
-    vesktop
-    feishin
-    dunst
-    waybar
     awww
-    wofi
-    grim
-    slurp
-    waypaper
+    blockbench
+    btop
+    cava
+    cmake
+    cmus
+    dunst
     fastfetch
-    hyfetch
-    pfetch
-    prismlauncher
-    hyprpolkitagent
+    feishin
+    grim
     grimblast
-    wl-clipboard
-    kdePackages.kate
+    hyfetch
+    hyprpolkitagent
+    jq
     kakoune
-    mpv
-    vlc
     kdePackages.ark
     kdePackages.gwenview
+    kdePackages.kate
     kdePackages.kio
-    kdePackages.kio-fuse
-    kdePackages.kio-extras
     kdePackages.kio-admin
-    obs-studio
-    cava
-    tty-clock
-    cmus
-    cmake
+    kdePackages.kio-extras
+    kdePackages.kio-fuse
     lxqt.pavucontrol-qt
-    vesktop
+    mpv
+    obs-studio
+    pfetch
+    prismlauncher
     proton-vpn
-    blockbench
+    slurp
+    tty-clock
+    vesktop
+    vesktop
+    vlc
+    waybar
+    waypaper
+    wl-clipboard
+    wofi
   ];
 
   programs.zen-browser.enable = true;
