@@ -1,7 +1,7 @@
 window {
 margin: 0px;
 border: 2px solid #D47889;
-border-radius: 10px;
+border-radius: 15px;
 background-color: rgba(20, 37, 53, 0.8);
 /*font-family: monospace;*/
 font-size: 12px;
@@ -10,7 +10,7 @@ font-size: 12px;
 #input {
 margin: 5px;
 border: 2px solid #D47889;
-border-radius: 7px;
+border-radius: 11px;
 color: #f0f0f0;
 background-color: rgba(20, 37, 53, 0.4);
 }
@@ -45,7 +45,7 @@ color: #f0f0f0;
 #entry:selected {
 	background-color: #D47889;
 	font-weight: normal;
-	border-radius: 7px;
+	border-radius: 11px;
 }
 
 #text:selected {
