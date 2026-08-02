@@ -8,6 +8,7 @@ This is my personal multiple-host NixOS flake config that I currently use for th
 | Host                               | Platform      |
 | ---------------------------------- | ------------- |
 | nixos-pc                           | x86_64-linux  |
+| nixos-laptop                       | x86_64-linux  |
 | nixos-macbook                      | aarch64-linux |
 | nixos-server                       | x86_64-linux  |
 

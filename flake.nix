@@ -84,6 +84,33 @@
         ];
       };
 
+      nixos-laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        modules = [
+          ./hosts/nixos-laptop/configuration.nix
+          ./modules/nixos-laptop/system
+          ./modules/common/system
+
+          mangowm.nixosModules.mango
+          qtengine.nixosModules.default
+
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.brooke = import ./modules/nixos-laptop/home-manager;
+
+              sharedModules = [
+                nixvim.homeModules.nixvim
+                mangowm.hmModules.mango
+                zen-browser.homeModules.twilight
+              ];
+            };
+          }
+        ];
+      };
+
       nixos-server = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 

@@ -1,0 +1,12 @@
+[Common]
+CornerRadius=7
+
+[Style]
+DolphinSidebarOpacity=70
+DolphinViewOpacity=50
+MenuBarOpacity=70
+MenuOpacity=70
+TabBGColor=15,27,39
+TabBarAltStyle=true
+TabBarOpacity=70
+ToolBarOpacity=70

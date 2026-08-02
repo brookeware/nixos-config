@@ -1,0 +1,100 @@
+{ config, pkgs, lib, inputs, ... }:
+
+{
+  home.username = "brooke";
+  home.homeDirectory = "/home/brooke";
+
+  home.file.".config" = {
+    source = ./dotfiles/.config;
+    recursive = true;
+  };
+
+  home.file.".local/share" = {
+    source = ./dotfiles/.local/share;
+    recursive = true;
+  };
+
+  home.file."Wallpapers" = {
+    source = ../../../../assets/wallpapers;
+    recursive = true;
+  };
+
+  home.packages = with pkgs; [
+    jq
+    btop
+    (discord.override {
+      withVencord = true;
+    })
+    vesktop
+    feishin
+    dunst
+    waybar
+    awww
+    wofi
+    grim
+    slurp
+    waypaper
+    fastfetch
+    hyfetch
+    pfetch
+    prismlauncher
+    hyprpolkitagent
+    grimblast
+    wl-clipboard
+    kdePackages.kate
+    kakoune
+    mpv
+    vlc
+    kdePackages.ark
+    kdePackages.gwenview
+    kdePackages.kio
+    kdePackages.kio-fuse
+    kdePackages.kio-extras
+    kdePackages.kio-admin
+    kdePackages.kmail
+    kdePackages.kmail-account-wizard
+    kdePackages.kdepim-runtime
+    kdePackages.akonadi
+    obs-studio
+    cava
+    tty-clock
+    cmus
+    cmake
+    proton-vpn
+    heroic
+    lxqt.pavucontrol-qt
+
+    # Temporary workaround until the Lutris build issue is fixed
+    (pkgs.lutris.override {
+      # Intercept buildFHSEnv to modify target packages
+      buildFHSEnv = args: pkgs.buildFHSEnv (args // {
+        multiPkgs = envPkgs:
+          let
+            # Fetch original package list
+            originalPkgs = args.multiPkgs envPkgs;
+
+            # Disable tests for openldap
+            customLdap = envPkgs.openldap.overrideAttrs (_: { doCheck = false; });
+          in
+          # Replace broken openldap with the custom one
+          builtins.filter (p: (p.pname or "") != "openldap") originalPkgs ++ [ customLdap ];
+      });
+    })
+  ];
+
+  home.pointerCursor = {
+    enable = true;
+    name = "Adwaita";
+    package = pkgs.adwaita-icon-theme;
+    size = 24;
+    x11 = {
+      enable = true;
+      defaultCursor = "Adwaita";
+    };
+  };
+
+  programs.zen-browser.enable = true;
+
+  home.stateVersion = "26.11";
+}
+
