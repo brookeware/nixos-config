@@ -62,6 +62,7 @@
     cmake
     proton-vpn
     heroic
+    lxqt.pavucontrol-qt
 
     # Temporary workaround until the Lutris build issue is fixed
     (pkgs.lutris.override {
