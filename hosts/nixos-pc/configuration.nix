@@ -25,6 +25,9 @@
   # Enable MangoWM
   programs.mango.enable = true;
 
+  # Enable Plasma Login Manager
+  services.displayManager.plasma-login-manager.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
