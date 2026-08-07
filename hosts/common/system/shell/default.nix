@@ -10,6 +10,7 @@
 
     shellAliases = {
       "nrs" = "sudo nixos-rebuild switch --flake ~/nixos-config --impure";
+      "nfu" = "nix flake update --flake ~/nixos-config";
     };
   };
 

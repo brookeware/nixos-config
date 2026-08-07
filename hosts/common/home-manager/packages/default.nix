@@ -38,5 +38,6 @@
     proton-vpn
     lxqt.pavucontrol-qt
     flameshot
+    krita
   ];
 }
