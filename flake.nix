@@ -35,8 +35,7 @@
 
         modules = [
           ./hosts/nixos-pc/configuration.nix
-          ./modules/nixos-pc/system
-          ./modules/common/system
+          ./hosts/common/system
 
           mangowm.nixosModules.mango
           qtengine.nixosModules.default
@@ -45,7 +44,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.brookolli = import ./modules/nixos-pc/home-manager;
+              users.brookolli = import ./hosts/nixos-pc/modules/home-manager;
 
               sharedModules = [
                 nixvim.homeModules.nixvim
@@ -62,8 +61,7 @@
 
         modules = [
           ./hosts/nixos-macbook/configuration.nix
-          ./modules/nixos-macbook/system
-          ./modules/common/system
+          ./hosts/common/system
 
           mangowm.nixosModules.mango
           qtengine.nixosModules.default
@@ -72,7 +70,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.brooke = import ./modules/nixos-macbook/home-manager;
+              users.brooke = import ./hosts/nixos-macbook/modules/home-manager;
 
               sharedModules = [
                 nixvim.homeModules.nixvim
@@ -89,8 +87,7 @@
 
         modules = [
           ./hosts/nixos-laptop/configuration.nix
-          ./modules/nixos-laptop/system
-          ./modules/common/system
+          ./hosts/common/system
 
           mangowm.nixosModules.mango
           qtengine.nixosModules.default
@@ -99,7 +96,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.brooke = import ./modules/nixos-laptop/home-manager;
+              users.brooke = import ./hosts/nixos-laptop/modules/home-manager;
 
               sharedModules = [
                 nixvim.homeModules.nixvim

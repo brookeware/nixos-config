@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ./../../common/home-manager
+    ./../../../common/home-manager
     ./home
   ];
 }

@@ -1,8 +1,8 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-  home.username = "brooke";
-  home.homeDirectory = "/home/brooke";
+  home.username = "brookolli";
+  home.homeDirectory = "/home/brookolli";
 
   home.file.".config" = {
     source = ./dotfiles/.config;
@@ -15,7 +15,7 @@
   };
 
   home.file."Wallpapers" = {
-    source = ../../../../assets/wallpapers;
+    source = ../../../../../assets/wallpapers;
     recursive = true;
   };
 

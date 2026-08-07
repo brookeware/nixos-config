@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./apple-silicon-support
+    ./modules/system
   ];
 
   # Time zone
