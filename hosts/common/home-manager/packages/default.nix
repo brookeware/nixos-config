@@ -1,0 +1,41 @@
+{ pkgs, ... }:
+{
+  home.packages = with pkgs; [
+    jq
+    btop
+    vesktop
+    feishin
+    dunst
+    waybar
+    awww
+    wofi
+    waypaper
+    fastfetch
+    hyfetch
+    pfetch
+    prismlauncher
+    hyprpolkitagent
+    wl-clipboard
+    kdePackages.kate
+    kakoune
+    mpv
+    vlc
+    kdePackages.ark
+    kdePackages.gwenview
+    kdePackages.kio
+    kdePackages.kio-fuse
+    kdePackages.kio-extras
+    kdePackages.kio-admin
+    kdePackages.kmail
+    kdePackages.kmail-account-wizard
+    kdePackages.kdepim-runtime
+    kdePackages.akonadi
+    obs-studio
+    cava
+    tty-clock
+    cmus
+    cmake
+    proton-vpn
+    lxqt.pavucontrol-qt
+  ];
+}
