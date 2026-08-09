@@ -25,8 +25,8 @@
         "org.freedesktop.impl.portal.Secret" = [ "gnome-keyring" ];
         "org.freedesktop.impl.portal.Inhibit" = [ "none" ];
       };
-      wlroots = {
-      };
+      # wlroots = {
+      # };
     };
   };
 }
