@@ -39,5 +39,6 @@
     lxqt.pavucontrol-qt
     flameshot
     krita
+    dolphin-emu
   ];
 }
