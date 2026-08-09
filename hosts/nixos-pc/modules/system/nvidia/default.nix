@@ -8,7 +8,7 @@
     powerManagement.enable = true;
     powerManagement.finegrained = false;
     open = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 }
 
