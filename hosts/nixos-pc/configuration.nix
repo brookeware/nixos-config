@@ -44,7 +44,6 @@
   # Environment variables
   environment.sessionVariables = rec {
     NIXOS_OZONE_WL="1";
-    WLR_DRM_NO_ATOMIC=1;
   };
 
   # Allow unfree packages
