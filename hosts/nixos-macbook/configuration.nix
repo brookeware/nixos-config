@@ -25,7 +25,10 @@
   };
 
   # Enable Asahi hardware module
-  hardware.asahi.enable = true;
+  hardware.asahi = {
+    enable = true;
+    peripheralFirmwareDirectory = /boot/vendorfw;
+  };
 
   # Enable Macbook Touch Bar
   hardware.apple.touchBar = {

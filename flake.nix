@@ -16,6 +16,11 @@
       url = "github:nix-community/nixvim";
     };
 
+    nixos-apple-silicon = {
+      url = "github:nix-community/nixos-apple-silicon";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     qtengine = {
       url = "github:kossLAN/qtengine";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,7 +32,7 @@
     };
   };
 
-  outputs = inputs@ { self, nixpkgs, mangowm, home-manager, nixvim, qtengine, zen-browser, ... }: {
+  outputs = inputs@ { self, nixpkgs, mangowm, home-manager, nixvim, nixos-apple-silicon, qtengine, zen-browser, ... }: {
     nixosConfigurations = {
       nixos-pc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -64,6 +69,7 @@
 
           mangowm.nixosModules.mango
           qtengine.nixosModules.default
+          nixos-apple-silicon.nixosModules.default
 
           home-manager.nixosModules.home-manager {
             home-manager = {
