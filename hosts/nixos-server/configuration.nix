@@ -25,29 +25,49 @@
   };
 
   # Users
-  users.users = {
-    "brooke" = {
-      isNormalUser = true;
-      description = "brooke";
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-      ];
-      packages = with pkgs; [
-        git
-      ];
+  users = {
+    groups = {
+      vintagestory = {};
     };
 
-    "wawacreate" = {
-      isNormalUser = true;
-      description = "wawacreate";
-      extraGroups = [ 
-        "networkmanager"
-        "wheel"
-      ];
-      packages = with pkgs; [
-        openjdk21
-      ];
+    users = {
+      "brooke" = {
+        isNormalUser = true;
+        description = "brooke";
+        extraGroups = [
+          "networkmanager"
+          "wheel"
+        ];
+        packages = with pkgs; [
+          git
+        ];
+      };
+
+      "wawacreate" = {
+        isNormalUser = true;
+        description = "wawacreate";
+        extraGroups = [ 
+          "networkmanager"
+          "wheel"
+        ];
+        packages = with pkgs; [
+          openjdk21
+        ];
+      }; 
+
+      "vintagestory" = {
+        isNormalUser = true;
+        description = "vintage story";
+        extraGroups = [
+          "networkmanager"
+          "vintagestory"
+        ];
+        packages = with pkgs; [
+          procps
+          screen
+          dotnetCorePackages.dotnet_10.runtime
+        ];
+      };
     };
   };
 

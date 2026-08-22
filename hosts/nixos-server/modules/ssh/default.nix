@@ -1,4 +1,4 @@
-{ config, ... }
+{ config, ... }:
 {
   services.openssh = {
     enable = true;
@@ -9,6 +9,7 @@
       PermitRootLogin = "no";
       AllowUsers = [
         "brooke"
+        "vintagestory"
       	"wawacreate"
       ];
     };
