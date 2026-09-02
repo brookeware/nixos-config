@@ -27,6 +27,7 @@
 
     heroic
     lutris
+    vintagestory
   ];
 
   home.pointerCursor = {
