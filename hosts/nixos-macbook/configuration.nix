@@ -65,7 +65,6 @@
     kdePackages.breeze-icons
     kdePackages.dolphin
     kdePackages.konsole
-    libreoffice-qt6-fresh
     swaylock
     swayidle
     vim

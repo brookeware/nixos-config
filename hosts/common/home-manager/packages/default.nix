@@ -40,5 +40,6 @@
     flameshot
     krita
     dolphin-emu
+    libreoffice-qt6-fresh
   ];
 }
