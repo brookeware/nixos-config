@@ -43,6 +43,7 @@
 
   # Environment variables
   environment.sessionVariables = rec {
+    SAL_USE_VCLPLUGIN="qt6";
     NIXOS_OZONE_WL="1";
   };
 
