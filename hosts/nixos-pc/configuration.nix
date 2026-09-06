@@ -26,8 +26,14 @@
   # Enable MangoWM
   programs.mango.enable = true;
 
-  # Enable Plasma Login Manager
-  # services.displayManager.plasma-login-manager.enable = true;
+  # Enable Noctalia Greeter
+  # services.displayManager.noctalia-greeter.enable = true;
+
+  # Enable Noctalia v5
+  programs.noctalia = {
+    enable = true;
+    recommendedServices.enable = true;
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -65,7 +71,7 @@
     kdePackages.breeze.qt5
     kdePackages.breeze-icons
     kitty
-    vim 
+    vim
   ];
 
   # Install services
