@@ -6,7 +6,6 @@
     vesktop
     feishin
     dunst
-    waybar
     awww
     wofi
     waypaper
@@ -14,7 +13,6 @@
     hyfetch
     pfetch
     prismlauncher
-    hyprpolkitagent
     wl-clipboard
     kdePackages.kate
     kakoune
