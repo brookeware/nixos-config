@@ -38,6 +38,11 @@
 
   # Window manager
   programs.mango.enable = true;
+
+  programs.noctalia = {
+    enable = true;
+    recommendedServices.enable = true;
+  };
   
   # Screen locking
   security.pam.services.swaylock = {};

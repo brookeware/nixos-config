@@ -32,7 +32,18 @@
     };
   };
 
-  outputs = inputs@ { self, nixpkgs, mangowm, home-manager, nixvim, nixos-apple-silicon, qtengine, zen-browser, ... }: {
+  outputs = inputs@ { 
+    self,
+    nixpkgs,
+    mangowm,
+    home-manager,
+    nixvim,
+    nixos-apple-silicon,
+    qtengine,
+    zen-browser,
+    ...
+  }:
+  {
     nixosConfigurations = {
       nixos-pc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
