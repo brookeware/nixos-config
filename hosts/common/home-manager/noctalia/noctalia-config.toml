@@ -1,0 +1,168 @@
+[audio]
+enable_sounds = true
+sound_volume = 0.75
+notification_sound = "/home/brooke/.config/noctalia/notification.wav"
+volume_change_sound = "/home/brooke/.config/noctalia/volume.wav"
+
+[bar.default]
+background_opacity = 0.5
+border = "primary"
+capsule_padding = 4.0
+capsule_thickness = 0.75
+center = [ "audio_visualizer" ]
+concave_edge_corners = false
+end = [ "tray", "clipboard", "wallpaper", "network", "bluetooth", "battery", "volume", "group:g2", "notifications" ]
+margin_ends = 10
+padding = 7
+position = "bottom"
+radius_bottom_left = 0
+radius_bottom_right = 0
+start = [ "launcher", "control-center", "workspaces", "active_window" ]
+thickness = 30
+widget_spacing = 7
+
+    [bar.default.dead_zone.actions]
+    right = "none"
+
+    [[bar.default.capsule_group]]
+    accordion = true
+    accordion_direction = "start"
+    enabled = true
+    fill = "surface_variant"
+    id = "g2"
+    members = [ "clock", "date" ]
+    opacity = 0.0
+    padding = 4.0
+
+[control_center]
+width = 800
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 300.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 600.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = false
+    timeout = 300.0
+
+[location]
+auto_locate = true
+
+[lockscreen]
+blur_intensity = 0.70
+tint_intensity = 0.6
+
+[notification]
+background_opacity = 0.5
+border = false
+layer = "overlay"
+offset_x = 10
+offset_y = 10
+position = "bottom_right"
+
+[osd]
+background_opacity = 0.5
+border = false
+position = "bottom_center"
+position_vertical = "bottom_center"
+
+    [osd.kinds]
+    brightness = false
+
+[shell]
+panel_anchor_bar = "default"
+polkit_agent = true
+settings_window_translucent = true
+
+    [shell.panel]
+    borders = false
+    launcher_placement = "attached"
+    open_near_click_control_center = true
+    open_near_click_launcher = true
+    open_near_click_wallpaper = true
+    session_placement = "floating"
+    session_position = "center"
+    transparency_mode = "glass"
+
+    [shell.shadow]
+    alpha = 0.0
+
+[theme]
+builtin = "Rosé Pine"
+community_palette = "Noctalia legacy"
+custom_palette = "brooke"
+mode = "dark"
+source = "custom"
+wallpaper_scheme = "muted"
+
+[wallpaper]
+directory = "/home/brooke/Documents/wallpapers"
+transition = [ "zoom" ]
+transition_duration = 600
+
+    [wallpaper.default]
+    path = "/home/brooke/Documents/wallpapers/Liquid.png"
+
+    [wallpaper.last]
+    path = "/home/brooke/Documents/wallpapers/Liquid.png"
+
+    [wallpaper.monitors.DP-5]
+    path = "/home/brookolli/Documents/Wallpapers/Liquid.png"
+
+    [wallpaper.monitors.HDMI-A-2]
+    path = "/home/brookolli/Documents/Wallpapers/Liquid.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/brooke/Documents/wallpapers/Liquid.png"
+
+[weather]
+unit = "imperial"
+
+[widget.active_window]
+max_length = 744
+
+[widget.audio_visualizer]
+bands = 37
+centered = false
+mirrored = false
+show_when_idle = false
+width = 185
+
+    [widget.audio_visualizer.actions]
+    left = "panel-toggle control-center media"
+
+[widget.clock]
+format = "{:%I:%M %p}"
+
+[widget.control-center]
+glyph = "home"
+
+[widget.date]
+format = "{:%m/%d/%y }"
+
+[widget.media]
+art_size = 20
+artist_first = true
+hide_when_no_media = true
+max_length = 411
+title_scroll = "always"
+
+[widget.network]
+show_label = false
+vpn_status = "both"
+
+[widget.weather]
+show_condition = false
+
+[widget.workspaces]
+style = "minimal"

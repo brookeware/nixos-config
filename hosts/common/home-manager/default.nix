@@ -8,6 +8,7 @@
     ./konsole
     ./mango
     ./nixvim
+    ./noctalia
     ./packages
   ];
 }
