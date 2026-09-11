@@ -69,7 +69,6 @@
     kdePackages.breeze.qt5
     kdePackages.breeze-icons
     kdePackages.dolphin
-    kdePackages.konsole
     swaylock
     swayidle
     vim

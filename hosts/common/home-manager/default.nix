@@ -5,7 +5,7 @@
     ./darkly
     ./flameshot
     ./git
-    ./konsole
+    ./kitty
     ./mango
     ./nixvim
     ./noctalia
