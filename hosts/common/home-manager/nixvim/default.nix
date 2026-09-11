@@ -39,7 +39,15 @@
       # gitsigns-nvim.enable = true;
       vim-suda.enable = true;
       guess-indent.enable = true;
-      presence.enable = true;
+
+      presence = {
+        enable = true;
+        settings = {         
+          editing_text = "Editing %s";
+          workspace_text = "Working on %s";
+          neovim_image_text = "Neovim";
+        };
+      };
     };
 
     opts = {
