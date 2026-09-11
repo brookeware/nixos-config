@@ -10,6 +10,7 @@
     hyfetch
     jq
     kdePackages.ark
+    kdePackages.dolphin
     kdePackages.gwenview
     kdePackages.kate
     kdePackages.kio

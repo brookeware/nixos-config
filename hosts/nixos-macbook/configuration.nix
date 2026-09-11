@@ -61,16 +61,12 @@
 
   # Install system packages
   environment.systemPackages = with pkgs; [
-    brightnessctl
-    btop
+    brightnessctl 
     darkly
     kdePackages.ark
     kdePackages.breeze
     kdePackages.breeze.qt5
     kdePackages.breeze-icons
-    kdePackages.dolphin
-    swaylock
-    swayidle
     vim
   ];
 
