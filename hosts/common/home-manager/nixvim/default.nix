@@ -3,6 +3,7 @@
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
+    nixpkgs.config.allowUnfree = true;
       
     colorschemes.base16 = {
       enable = true;
@@ -38,6 +39,7 @@
       # gitsigns-nvim.enable = true;
       vim-suda.enable = true;
       guess-indent.enable = true;
+      presence.enable = true;
     };
 
     opts = {
