@@ -5,17 +5,11 @@
     btop
     vesktop
     feishin
-    dunst
-    awww
-    wofi
-    waypaper
     fastfetch
     hyfetch
-    pfetch
     prismlauncher
     wl-clipboard
     kdePackages.kate
-    kakoune
     mpv
     vlc
     kdePackages.ark
@@ -24,20 +18,11 @@
     kdePackages.kio-fuse
     kdePackages.kio-extras
     kdePackages.kio-admin
-    kdePackages.kmail
-    kdePackages.kmail-account-wizard
-    kdePackages.kdepim-runtime
-    kdePackages.akonadi
     obs-studio
-    cava
-    tty-clock
-    cmus
     cmake
-    proton-vpn
     lxqt.pavucontrol-qt
     flameshot
     krita
-    dolphin-emu
     libreoffice-qt6-fresh
   ];
 }
