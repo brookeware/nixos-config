@@ -8,9 +8,11 @@
   networking.firewall = {
     allowedTCPPorts = [
       53317
+      25566
     ];
     allowedUDPPorts = [
       53317
+      25566
     ];
   };
 }
