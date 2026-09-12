@@ -3,7 +3,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     mangowm = {
-      url = "github:mangowm/mango";
+      url = "github:mangowm/mango/pull/1387/head";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
