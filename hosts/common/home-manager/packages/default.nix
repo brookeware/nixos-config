@@ -18,7 +18,7 @@
     kdePackages.kio-extras
     kdePackages.kio-fuse
     krita
-    libreoffice-qt6-fresh
+    libreoffice-qt-stable
     lxqt.pavucontrol-qt
     mpv
     obs-studio
