@@ -17,10 +17,10 @@ Credit to [nixos-apple-silicon](https://github.com/nix-community/nixos-apple-sil
 ## Components
 | Component           | Name                                                                                                          |
 | ------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Window Manager      | [MangoWM](https://github.com/mangowm/mango) + [Noctalia v5](https://github.com/noctalia-dev/noctalia) |
+| Window Manager      | [MangoWM](https://github.com/mangowm/mango) + [Noctalia v5](https://github.com/noctalia-dev/noctalia)         |
 | File Manager        | [Dolphin](https://github.com/KDE/dolphin)                                                                     |
 | Editor              | [Neovim](https://neovim.io/)                                                                                  |
-| Terminal            | [Kitty](https://github.com/kovidgoyal/kitty)                                                                     |
+| Terminal            | [Kitty](https://github.com/kovidgoyal/kitty)                                                                  |
 | Shell               | [Zsh](https://www.zsh.org/) + [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)                                 |
 | Resource Monitor    | [btop](https://github.com/aristocratos/btop)                                                                  |
 | Web Browser         | [Zen](https://github.com/zen-browser/desktop)                                                                 |
