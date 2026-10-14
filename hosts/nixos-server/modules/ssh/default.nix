@@ -9,6 +9,7 @@
       PermitRootLogin = "no";
       AllowUsers = [
         "brooke"
+        "files"
         "vintagestory"
       	"wawacreate"
       ];
