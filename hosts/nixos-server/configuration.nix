@@ -53,7 +53,13 @@
         packages = with pkgs; [
           openjdk21
         ];
-      }; 
+      };
+
+      "files" = {
+        isNormalUser = true;
+        description = "file server user";
+      	home = "/mnt/hdd/files";
+      };
 
       "vintagestory" = {
         isNormalUser = true;
